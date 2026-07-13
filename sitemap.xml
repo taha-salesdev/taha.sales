@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://tahasales.vercel.app/</loc>
+    <loc>https://tahasalesdev.vercel.app/</loc>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://tahasales.vercel.app/about.html</loc>
+    <loc>https://tahasalesdev.vercel.app/about.html</loc>
   </url>
 
   <url>
-    <loc>https://tahasales.vercel.app/services.html</loc>
+    <loc>https://tahasalesdev.vercel.app/services.html</loc>
   </url>
 
   <url>
-    <loc>https://tahasales.vercel.app/portfolio.html</loc>
+    <loc>https://tahasalesdev.vercel.app/portfolio.html</loc>
   </url>
 
   <url>
-    <loc>https://tahasales.vercel.app/experience.html</loc>
+    <loc>https://tahasalesdev.vercel.app/experience.html</loc>
   </url>
 
   <url>
-    <loc>https://tahasales.vercel.app/resume.html</loc>
+    <loc>https://tahasalesdev.vercel.app/resume.html</loc>
   </url>
 
   <url>
-    <loc>https://tahasales.vercel.app/certifications.html</loc>
+    <loc>https://tahasalesdev.vercel.app/certifications.html</loc>
   </url>
 
   <url>
-    <loc>https://tahasales.vercel.app/feedback.html</loc>
+    <loc>https://tahasalesdev.vercel.app/feedback.html</loc>
   </url>
 
   <url>
-    <loc>https://tahasales.vercel.app/contact.html</loc>
+    <loc>https://tahasalesdev.vercel.app/contact.html</loc>
   </url>
 
 </urlset>
