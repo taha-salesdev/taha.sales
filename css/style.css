@@ -1471,3 +1471,29 @@ header .container{
 
 }
 
+/* Resume Buttons */
+
+.resume-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+@media(max-width:768px){
+
+.resume-buttons{
+    flex-direction:column;
+}
+
+.resume-buttons .btn,
+.resume-buttons .btn-outline{
+    width:100%;
+    max-width:320px;
+    text-align:center;
+}
+
+}
+
