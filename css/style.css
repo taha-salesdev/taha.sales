@@ -1384,3 +1384,55 @@ HEADER SOCIAL
 
 }
 
+/* Existing CSS */
+
+@media(max-width:480px){
+
+    /* your existing code */
+
+}
+
+/* ==========================
+   MOBILE HEADER FIX
+========================== */
+
+@media (max-width: 768px){
+
+header .container{
+    padding:10px 15px;
+    gap:10px;
+}
+
+.logo-area{
+    flex:1;
+    gap:10px;
+    min-width:0;
+}
+
+.logo{
+    font-size:24px;
+}
+
+.header-social{
+    gap:6px;
+}
+
+.header-social a{
+    width:32px;
+    height:32px;
+    flex-shrink:0;
+}
+
+.header-social a i{
+    font-size:14px;
+}
+
+.menu-btn{
+    display:block;
+    font-size:26px;
+    margin-left:10px;
+    flex-shrink:0;
+}
+
+}
+
