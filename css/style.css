@@ -298,36 +298,6 @@ nav a.active{
     gap:70px;
 
     align-items:center;
-   /* ===== Mobile Navigation ===== */
-
-nav{
-    display:none;
-    position:absolute;
-    top:75px;
-    left:0;
-    width:100%;
-    background:#0f172a;
-    padding:20px 0;
-    z-index:999;
-    box-shadow:0 10px 30px rgba(0,0,0,.35);
-}
-
-nav.show{
-    display:block;
-}
-
-nav ul{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:20px;
-}
-
-.menu-btn{
-    display:block;
-    font-size:28px;
-    cursor:pointer;
-}
 
 }
 
@@ -795,16 +765,34 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
+/* Mobile Navigation */
+
 nav{
+    display:none;
+    position:absolute;
+    top:75px;
+    left:0;
+    width:100%;
+    background:#0f172a;
+    padding:20px 0;
+    z-index:9999;
+}
 
-display:none;
+nav.show{
+    display:block;
+}
 
+nav ul{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
 }
 
 .menu-btn{
-
-display:block;
-
+    display:block;
+    font-size:28px;
+    cursor:pointer;
 }
 
 }
