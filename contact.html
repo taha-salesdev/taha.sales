@@ -217,40 +217,72 @@ Send Me a Message
 
 <div class="contact-form">
 
-<form id="contactForm">
+<form
+id="contactForm"
+action="https://formsubmit.co/tahaatworknow@gmail.com"
+method="POST">
 
 <input
 type="text"
 id="name"
+name="Name"
 placeholder="Your Name"
 required>
 
 <input
 type="email"
 id="email"
+name="Email"
 placeholder="Your Email"
 required>
 
 <input
 type="text"
 id="subject"
+name="Subject"
 placeholder="Subject"
 required>
 
 <textarea
 id="message"
+name="Message"
 rows="7"
 placeholder="Write your message..."
 required></textarea>
 
+<!-- Hidden Settings -->
+
+<input
+type="hidden"
+name="_subject"
+value="New Portfolio Inquiry">
+
+<input
+type="hidden"
+name="_template"
+value="table">
+
+<input
+type="hidden"
+name="_honeypot"
+value="">
+
+<input
+type="hidden"
+name="_next"
+value="https://tahasales.vercel.app/contact.html">
+
+<!-- Submit Button -->
+
 <button class="btn" type="submit">
+
+<i class="fas fa-paper-plane"></i>
 
 Send Message
 
 </button>
 
 </form>
-
 </div>
 
 </div>
