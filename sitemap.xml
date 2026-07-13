@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://tahasales.vercel.app/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tahasales.vercel.app/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://tahasales.vercel.app/services.html</loc>
+  </url>
+
+  <url>
+    <loc>https://tahasales.vercel.app/portfolio.html</loc>
+  </url>
+
+  <url>
+    <loc>https://tahasales.vercel.app/experience.html</loc>
+  </url>
+
+  <url>
+    <loc>https://tahasales.vercel.app/resume.html</loc>
+  </url>
+
+  <url>
+    <loc>https://tahasales.vercel.app/certifications.html</loc>
+  </url>
+
+  <url>
+    <loc>https://tahasales.vercel.app/feedback.html</loc>
+  </url>
+
+  <url>
+    <loc>https://tahasales.vercel.app/contact.html</loc>
+  </url>
+
+</urlset>
