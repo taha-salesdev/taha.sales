@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://tahasalesdev.vercel.app/sitemap.xml
