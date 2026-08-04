@@ -1402,6 +1402,28 @@ HEADER SOCIAL
 
 }
 
+/* ==========================================
+   CUSTOM LINKTREE ICON
+========================================== */
+
+.fa-linktree,
+.fab.fa-linktree,
+.fa-brands.fa-linktree {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    mask: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m13.736%205.853%204.005-4.17%202.099%202.016-3.991%204.155%205.933%206.183-2.099%202.016-4.683-4.875v8.822h-3.001v-8.822l-4.683%204.875-2.099-2.016%205.933-6.183-3.991-4.155%202.099-2.016%204.005%204.17V0h3.001v5.853zM10.499%2018.397h3.001V24h-3.001v-5.603z%22%2F%3E%3C%2Fsvg%3E") no-repeat center / contain;
+    -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m13.736%205.853%204.005-4.17%202.099%202.016-3.991%204.155%205.933%206.183-2.099%202.016-4.683-4.875v8.822h-3.001v-8.822l-4.683%204.875-2.099-2.016%205.933-6.183-3.991-4.155%202.099-2.016%204.005%204.17V0h3.001v5.853zM10.499%2018.397h3.001V24h-3.001v-5.603z%22%2F%3E%3C%2Fsvg%3E") no-repeat center / contain;
+    vertical-align: -0.125em;
+}
+
+.fa-linktree::before,
+.fab.fa-linktree::before,
+.fa-brands.fa-linktree::before {
+    content: "" !important;
+}
+
 /* Existing CSS */
 
 @media(max-width:480px){
