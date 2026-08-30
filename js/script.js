@@ -354,3 +354,56 @@ window.addEventListener("mousemove", e => {
 console.log("%cPortfolio Developed by Taha Bin Ishfaq",
 
 "color:#3b82f6;font-size:18px;font-weight:bold;");
+
+/* ==========================================================
+   MOBILE SOCIAL TOGGLE
+========================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+    const toggles = document.querySelectorAll(".mobile-social-toggle");
+    
+    toggles.forEach(toggle => {
+        toggle.addEventListener("click", () => {
+            const headerSocial = toggle.closest(".header-social");
+            if(headerSocial) {
+                headerSocial.classList.toggle("show-all");
+                const icon = toggle.querySelector("i");
+                if (icon) {
+                    if (headerSocial.classList.contains("show-all")) {
+                        icon.classList.remove("fa-plus");
+                        icon.classList.add("fa-chevron-left");
+                    } else {
+                        icon.classList.remove("fa-chevron-left");
+                        icon.classList.add("fa-plus");
+                    }
+                }
+            }
+        });
+    });
+});
+
+/* ==========================================================
+   HIDE HEADER SOCIAL ON FOOTER
+========================================================== */
+document.addEventListener("DOMContentLoaded", () => {
+    const footer = document.querySelector("footer");
+    const headerSocial = document.querySelector(".header-social");
+    
+    if (footer && headerSocial) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    headerSocial.style.opacity = "0";
+                    headerSocial.style.visibility = "hidden";
+                    headerSocial.style.pointerEvents = "none";
+                } else {
+                    headerSocial.style.opacity = "1";
+                    headerSocial.style.visibility = "visible";
+                    headerSocial.style.pointerEvents = "auto";
+                }
+            });
+        }, { threshold: 0.05 });
+        
+        headerSocial.style.transition = "opacity 0.3s ease, visibility 0.3s ease";
+        observer.observe(footer);
+    }
+});
