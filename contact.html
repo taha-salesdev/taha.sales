@@ -31,6 +31,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png?v=1">
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <!-- JSON-LD Structured Data -->
 <script type="application/ld+json">
@@ -295,9 +296,9 @@ Send Me a Message
 <div class="contact-form">
 
 <form
-id="contactForm"
-action="https://formsubmit.co/tahaatworknow@gmail.com"
-method="POST">
+    id="contactForm"
+    action="/api/contact"
+    method="POST">
 
 <label for="name" style="color:#e2e8f0;font-weight:500;font-size:14px;margin-bottom:-12px;display:block;text-align:left;">Your Name</label>
 <input
@@ -353,8 +354,12 @@ type="hidden"
 name="_next"
 value="https://tahasalesdev.vercel.app/thankyou.html">
 
-<input type="hidden" name="_captcha" value="false">
-
+<!-- Cloudflare Turnstile CAPTCHA -->
+<div class="cf-turnstile"
+     data-sitekey="0x4AAAAAAEi_hil_Dei6LxRZ"
+     data-theme="dark">
+</div>
+    
 <!-- Submit Button -->
 <button class="btn" type="submit">
 
