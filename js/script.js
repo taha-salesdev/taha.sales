@@ -407,3 +407,83 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(footer);
     }
 });
+
+/* ==========================================================
+   CONTACT FORM SUBMISSION
+========================================================== */
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", async (e) => {
+
+        e.preventDefault();
+
+        const submitBtn = contactForm.querySelector("button[type='submit']");
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = "Sending...";
+
+        const formData = new FormData(contactForm);
+        const turnstileToken = formData.get("cf-turnstile-response");
+
+        if (!turnstileToken) {
+            alert("Please complete the CAPTCHA before sending your message.");
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+            return;
+        }
+
+        try {
+
+            // Step 1: verify CAPTCHA via our serverless function
+            const verifyRes = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams({ "cf-turnstile-response": turnstileToken })
+            });
+
+            const verifyData = await verifyRes.json();
+
+            if (!verifyData.success) {
+                alert(verifyData.message || "CAPTCHA verification failed. Please try again.");
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+                return;
+            }
+
+            // Step 2: CAPTCHA passed — send the message directly from the browser to FormSubmit
+            const fsRes = await fetch("https://formsubmit.co/ajax/tahaatworknow@gmail.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    Name: formData.get("Name"),
+                    Email: formData.get("Email"),
+                    Subject: formData.get("Subject"),
+                    Message: formData.get("Message"),
+                    _subject: "New Portfolio Inquiry",
+                    _template: "table",
+                    _captcha: "false"
+                })
+            });
+
+            if (fsRes.ok) {
+                window.location.href = "https://tahasalesdev.vercel.app/thankyou.html";
+            } else {
+                throw new Error("FormSubmit request failed");
+            }
+
+        } catch (err) {
+            console.error("Contact form error:", err);
+            alert("Something went wrong sending your message. Please try again later.");
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        }
+
+    });
+
+}
