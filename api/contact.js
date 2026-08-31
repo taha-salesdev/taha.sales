@@ -55,8 +55,7 @@ export default async function handler(req, res) {
         );
 
         const verification = await verifyResponse.json();
-
-        console.log("Turnstile verification:", verification.success);
+        console.log("Turnstile verification:", JSON.stringify(verification));
 
         if (!verification.success) {
             return res.status(403).send(
