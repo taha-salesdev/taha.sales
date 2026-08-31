@@ -1,23 +1,42 @@
 export default async function handler(req, res) {
     if (req.method !== "POST") {
-        return res.status(405).json({
-            success: false,
-            message: "Method not allowed"
-        });
+        return res.status(405).send("Method Not Allowed");
     }
 
     try {
-        const {
-            Name,
-            Email,
-            Subject,
-            Message,
-            "cf-turnstile-response": turnstileToken
-        } = req.body;
+        // Vercel normally parses the body for us.
+        // This also handles cases where the body arrives as a string.
+        let body = req.body;
 
-        // Check Turnstile token
-        if (!turnstileToken) {
-            return res.status(400).send("Please complete the CAPTCHA.");
+        if (typeof body === "string") {
+            const params = new URLSearchParams(body);
+            body = Object.fromEntries(params.entries());
+        }
+
+        body = body || {};
+
+        const name = body.Name || "";
+        const email = body.Email || "";
+        const subject = body.Subject || "";
+        const message = body.Message || "";
+        const turnstileToken = body["cf-turnstile-response"];
+
+        // Make sure CAPTCHA was completed
+        if (
+            typeof turnstileToken !== "string" ||
+            turnstileToken.length === 0
+        ) {
+            return res.status(400).send(
+                "Please complete the CAPTCHA before sending your message."
+            );
+        }
+
+        // Make sure the Vercel environment variable exists
+        if (!process.env.TURNSTILE_SECRET) {
+            console.error("TURNSTILE_SECRET is missing.");
+            return res.status(500).send(
+                "Server configuration error. Please try again later."
+            );
         }
 
         // Verify Turnstile with Cloudflare
@@ -29,7 +48,7 @@ export default async function handler(req, res) {
                     "Content-Type": "application/x-www-form-urlencoded"
                 },
                 body: new URLSearchParams({
-                    secret: process.env.0x4AAAAAAEi_hnjLdep_q-6XxNUi19qZYwk,
+                    secret: process.env.TURNSTILE_SECRET,
                     response: turnstileToken
                 })
             }
@@ -37,24 +56,31 @@ export default async function handler(req, res) {
 
         const verification = await verifyResponse.json();
 
+        console.log("Turnstile verification:", verification.success);
+
         if (!verification.success) {
             return res.status(403).send(
-                "CAPTCHA verification failed. Please try again."
+                "CAPTCHA verification failed. Please refresh the page and try again."
             );
         }
 
-        // Send the form to FormSubmit
+        // Prepare data for FormSubmit
         const formData = new URLSearchParams();
 
-        formData.append("Name", Name || "");
-        formData.append("Email", Email || "");
-        formData.append("Subject", Subject || "");
-        formData.append("Message", Message || "");
+        formData.append("Name", name);
+        formData.append("Email", email);
+        formData.append("Subject", subject);
+        formData.append("Message", message);
 
         formData.append("_subject", "New Portfolio Inquiry");
         formData.append("_template", "table");
         formData.append("_captcha", "false");
+        formData.append(
+            "_next",
+            "https://tahasalesdev.vercel.app/thankyou.html"
+        );
 
+        // Forward verified submission to FormSubmit
         const formSubmitResponse = await fetch(
             "https://formsubmit.co/tahaatworknow@gmail.com",
             {
@@ -67,19 +93,27 @@ export default async function handler(req, res) {
         );
 
         if (!formSubmitResponse.ok) {
+            console.error(
+                "FormSubmit error:",
+                formSubmitResponse.status
+            );
+
             return res.status(500).send(
-                "Unable to send your message. Please try again."
+                "Your message could not be sent. Please try again."
             );
         }
 
-        // Redirect user after successful submission
-        return res.redirect(303, "/thankyou.html");
+        // Successful submission
+        return res.redirect(
+            303,
+            "https://tahasalesdev.vercel.app/thankyou.html"
+        );
 
     } catch (error) {
-        console.error("Contact form error:", error);
+        console.error("CONTACT FUNCTION ERROR:", error);
 
         return res.status(500).send(
-            "Something went wrong. Please try again later."
+            "Something went wrong while sending your message. Please try again later."
         );
     }
 }
