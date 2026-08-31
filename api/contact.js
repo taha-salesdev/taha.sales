@@ -80,25 +80,25 @@ export default async function handler(req, res) {
         );
 
         // Forward verified submission to FormSubmit
-const formSubmitResponse = await fetch(
-    "https://formsubmit.co/tahaatworknow@gmail.com",
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Referer": "https://tahasalesdev.vercel.app/contact.html"
-        },
-        body: formData.toString()
-    }
-);
-
-if (!formSubmitResponse.ok) {
-    const errBody = await formSubmitResponse.text();
-    console.error("FormSubmit error:", formSubmitResponse.status, errBody);
-    return res.status(500).send(
-        "Your message could not be sent. Please try again."
-    );
-}
+        const formSubmitResponse = await fetch(
+            "https://formsubmit.co/tahaatworknow@gmail.com",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Referer": "https://tahasalesdev.vercel.app/contact.html"
+                },
+                body: formData.toString()
+            }
+        );
+        
+        if (!formSubmitResponse.ok) {
+            const errBody = await formSubmitResponse.text();
+            console.error("FormSubmit error:", formSubmitResponse.status, errBody);
+            return res.status(500).send(
+                "Your message could not be sent. Please try again."
+            );
+        }
 
         // Successful submission
         return res.redirect(
