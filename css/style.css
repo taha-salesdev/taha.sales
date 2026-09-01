@@ -1642,3 +1642,22 @@ HEADER SOCIAL
     transform: translateY(-3px) scale(1.1);
     box-shadow: 0 0 18px rgba(37, 99, 235, .65);
 }
+
+.top-rated-badge {
+    margin: 12px 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.top-rated-badge img {
+    width: 120px;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .top-rated-badge img {
+        width: 110px;
+    }
+}
