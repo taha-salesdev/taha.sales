@@ -1649,19 +1649,6 @@ HEADER SOCIAL
     align-items: center;
 }
 
-.top-rated-badge img {
-    width: 120px;
-    height: auto;
-    display: block;
-    border-radius: 4px;
-}
-
-@media (max-width: 768px) {
-    .top-rated-badge img {
-        width: 110px;
-    }
-}
-
 .top-rated-badge {
     display: inline-flex;
     align-items: center;
