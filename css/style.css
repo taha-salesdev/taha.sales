@@ -1661,3 +1661,28 @@ HEADER SOCIAL
         width: 110px;
     }
 }
+
+.top-rated-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 14px 0 12px;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    width: fit-content;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.top-rated-badge i {
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.top-rated-badge span {
+    white-space: nowrap;
+}
