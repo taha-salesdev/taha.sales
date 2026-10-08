@@ -1675,37 +1675,21 @@ HEADER SOCIAL
 }
 
 
-/* Freelance Platform Brand Icons */
-.header-social .social-visible a .platform-icon,
-.footer-social-icons a .platform-icon {
-    width: 18px;
-    height: 18px;
+
+/* Freelance platform logos */
+.header-social .social-visible a img.platform-icon,
+.footer-social-icons a img.platform-icon {
+    width: 18px !important;
+    height: 18px !important;
+    max-width: 18px;
+    display: block;
     object-fit: contain;
-    vertical-align: middle;
+    flex-shrink: 0;
+    background: transparent;
     transition: transform 0.3s ease;
 }
 
-.header-social .social-visible a:hover .platform-icon,
-.footer-social-icons a:hover .platform-icon {
-    transform: scale(1.15);
-}
-
-
-.platform-icon {
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    object-fit: contain;
-    vertical-align: middle;
-}
-
-.social-visible a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-visible a:hover .platform-icon {
+.header-social .social-visible a:hover img.platform-icon,
+.footer-social-icons a:hover img.platform-icon {
     transform: scale(1.12);
-    transition: transform 0.3s ease;
 }
