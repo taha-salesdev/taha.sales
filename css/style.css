@@ -1674,15 +1674,19 @@ HEADER SOCIAL
     white-space: nowrap;
 }
 
+/* ==========================
+   FREELANCE PLATFORM LOGOS
+========================== */
 
-/* Freelance platform logos */
-.header-social .social-visible a {
+.header-social .social-visible a,
+.header-social .social-hidden a {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .header-social .social-visible a img.platform-icon,
+.header-social .social-hidden a img.platform-icon,
 .footer-social-icons a img.platform-icon {
     width: 18px !important;
     height: 18px !important;
@@ -1701,14 +1705,29 @@ HEADER SOCIAL
 }
 
 .header-social .social-visible a:hover img.platform-icon,
+.header-social .social-hidden a:hover img.platform-icon,
 .footer-social-icons a:hover img.platform-icon {
     transform: scale(1.12);
 }
 
-.header-social .social-visible {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
+/* PC - vertical social bar */
+@media (min-width: 993px) {
+    .header-social .social-visible,
+    .header-social .social-hidden {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+/* Mobile - horizontal social row */
+@media (max-width: 992px) {
+    .header-social .social-visible,
+    .header-social .social-hidden {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+    }
 }
