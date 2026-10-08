@@ -1724,3 +1724,86 @@ HEADER SOCIAL
 .linktree-icon {
     font-size: 15px;
 }
+ /* ==========================
+    FOOTER SOCIAL ICONS
+ ========================== */
+
+.footer-social-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-social-icons {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap;
+    gap: 10px !important;
+}
+
+.footer-social-icons a {
+    width: 38px !important;
+    height: 38px !important;
+
+    min-width: 38px;
+    min-height: 38px;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-direction: row !important;
+
+    border-radius: 50%;
+    text-decoration: none;
+
+    background: #111827;
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    color: #fff;
+
+    flex-shrink: 0;
+
+    transition: .3s ease;
+}
+
+.footer-social-icons a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    line-height: 1;
+}
+
+.footer-social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.footer-social-icons .platform-text {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 18px;
+    height: 18px;
+
+    margin: 0;
+    padding: 0;
+
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.footer-social-icons .fiverr-icon {
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+
+.footer-social-icons .contra-icon,
+.footer-social-icons .freelancer-icon,
+.footer-social-icons .linktree-icon {
+    font-size: 15px;
+}
