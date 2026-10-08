@@ -1533,201 +1533,149 @@ HEADER SOCIAL
 }
 
 /* ==========================
-   NEW SOCIAL LAYOUT (PC & MOBILE)
+   SOCIAL LAYOUT - DESKTOP
 ========================== */
 
-/* PC Centered Nav & Fixed Socials */
 @media (min-width: 993px) {
+
     header .container {
-        justify-content: center; /* Center the Nav */
+        justify-content: center;
         position: relative;
     }
+
     .logo-area {
         position: absolute;
         left: 20px;
     }
+
     .header-social {
         position: fixed;
         right: 20px;
         top: 120px;
-        flex-direction: column;
-        gap: 12px;
         z-index: 1000;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+
         max-height: calc(100vh - 140px);
         overflow-y: auto;
-    }
-    /* Hide scrollbar for social icons if it overflows */
-    .header-social::-webkit-scrollbar {
-        display: none;
-    }
-    .header-social {
+
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
+
+    .header-social::-webkit-scrollbar {
+        display: none;
+    }
+
     .header-social .social-visible,
     .header-social .social-hidden {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 12px;
     }
+
     .header-social .mobile-social-toggle {
         display: none;
     }
 }
 
-/* Mobile Layout for Socials */
+
+/* ==========================
+   SOCIAL LAYOUT - MOBILE
+========================== */
+
 @media (max-width: 992px) {
-    .header-social .social-visible,
-    .header-social .social-hidden {
+
+    .header-social {
         display: flex;
-        flex-direction: row;
+        align-items: center;
         gap: 6px;
     }
-    .header-social .social-hidden {
-        display: none; /* Hide extended icons by default */
+
+    .header-social .social-visible {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
     }
+
+    .header-social .social-hidden {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+    }
+
     .header-social .mobile-social-toggle {
         display: flex;
         align-items: center;
         justify-content: center;
+
         width: 32px;
         height: 32px;
+
+        flex-shrink: 0;
+
         border-radius: 50%;
         background: #111827;
         border: 1px solid rgba(255, 255, 255, .08);
+
         color: #fff;
         cursor: pointer;
-        transition: 0.3s;
+        transition: .3s;
     }
+
     .header-social .mobile-social-toggle:hover {
         background: var(--primary);
     }
-    
-    /* When expanded */
-    .header-social.show-all .social-visible a {
-        display: none; /* Hide the initial icons */
+
+    /* Expanded state */
+    .header-social.show-all .social-visible {
+        display: none;
     }
+
     .header-social.show-all .social-hidden {
-        display: flex; /* Show the new icons */
+        display: flex;
+    }
+
+    .header-social.show-all .mobile-social-toggle {
+        display: flex;
     }
 }
 
-/* Footer Social Icons */
-.footer-social-col {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-.footer-social-icons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-.footer-social-icons a {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #111827;
-    border: 1px solid rgba(255, 255, 255, .08);
-    color: #fff;
-    text-decoration: none;
-    transition: .35s;
-}
-.footer-social-icons a:hover {
-    background: #2563eb;
-    color: #fff;
-    transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 0 18px rgba(37, 99, 235, .65);
-}
-
-.top-rated-badge {
-    margin: 12px 0 10px;
-    display: flex;
-    align-items: center;
-}
-
-.top-rated-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin: 14px 0 12px;
-    padding: 8px 14px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.06);
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    width: fit-content;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.top-rated-badge i {
-    font-size: 13px;
-    color: #ffffff;
-}
-
-.top-rated-badge span {
-    white-space: nowrap;
-}
 
 /* ==========================
-   FREELANCE PLATFORM LOGOS
+   PLATFORM SVG ICONS
 ========================== */
 
-.header-social .social-visible a,
-.header-social .social-hidden a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header-social .social-visible a img.platform-icon,
-.header-social .social-hidden a img.platform-icon,
-.footer-social-icons a img.platform-icon {
+.header-social a img.platform-icon {
     width: 18px !important;
     height: 18px !important;
+
     min-width: 18px;
     min-height: 18px;
     max-width: 18px;
     max-height: 18px;
+
     display: block;
+
     object-fit: contain;
-    flex-shrink: 0;
-    background: transparent;
-    border: none;
+
     margin: 0;
     padding: 0;
-    transition: transform 0.3s ease;
+
+    background: transparent;
+    border: none;
+
+    flex-shrink: 0;
+
+    transition: transform .3s ease;
 }
 
-.header-social .social-visible a:hover img.platform-icon,
-.header-social .social-hidden a:hover img.platform-icon,
-.footer-social-icons a:hover img.platform-icon {
+.header-social a:hover img.platform-icon {
     transform: scale(1.12);
-}
-
-/* PC - vertical social bar */
-@media (min-width: 993px) {
-    .header-social .social-visible,
-    .header-social .social-hidden {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-}
-
-/* Mobile - horizontal social row */
-@media (max-width: 992px) {
-    .header-social .social-visible,
-    .header-social .social-hidden {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 6px;
-    }
 }
