@@ -1700,3 +1700,27 @@ HEADER SOCIAL
 .linktree-icon {
     font-size: 15px;
 }
+
+.platform-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.fiverr-icon {
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+
+.contra-icon,
+.freelancer-icon,
+.linktree-icon {
+    font-size: 15px;
+}
