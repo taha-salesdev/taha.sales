@@ -1679,3 +1679,24 @@ HEADER SOCIAL
 .header-social a:hover img.platform-icon {
     transform: scale(1.12);
 }
+
+.platform-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.fiverr-icon {
+    font-size: 13px;
+}
+
+.freelancer-icon,
+.contra-icon,
+.linktree-icon {
+    font-size: 15px;
+}
