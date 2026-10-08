@@ -29,6 +29,7 @@
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png?v=1">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
@@ -46,28 +47,35 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     {
       "@type": "Occupation",
       "name": "Sales Development Representative",
-      "occupationLocation": { "@type": "AdministrativeArea", "name": "Global" }
+      "occupationLocation": {
+        "@type": "AdministrativeArea",
+        "name": "Global"
+      }
     },
     {
       "@type": "Occupation",
       "name": "Lead Generation Specialist",
-      "occupationLocation": { "@type": "AdministrativeArea", "name": "Global" }
+      "occupationLocation": {
+        "@type": "AdministrativeArea",
+        "name": "Global"
+      }
     }
   ]
 }
 </script>
+
 </head>
 
 <body>
 
 <div id="loader">
-<div class="loader-circle"></div>
+    <div class="loader-circle"></div>
 </div>
 
 <div id="progressBar"></div>
 
 <button id="topBtn">
-<i class="fas fa-arrow-up"></i>
+    <i class="fas fa-arrow-up"></i>
 </button>
 
 <header>
@@ -81,19 +89,100 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     </a>
 
     <div class="header-social">
+
         <div class="social-visible">
-            <a href="https://www.upwork.com/freelancers/tahabinashfaq" target="_blank" title="Upwork"><i class="fab fa-upwork"></i></a>
-            <a href="https://wa.me/923344058002" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.facebook.com/taha.salesdev" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/taha.salesdev/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <button class="mobile-social-toggle" id="mobileSocialToggle" aria-label="Show more social links"><i class="fas fa-plus"></i></button>
+
+            <a href="https://www.upwork.com/freelancers/tahabinashfaq"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="Upwork">
+                <i class="fab fa-upwork"></i>
+            </a>
+
+            <a href="https://wa.me/923344058002"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://contra.com/taha_salesdev/"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="Contra">
+                <span class="platform-text contra-icon">C</span>
+            </a>
+
+            <a href="https://www.fiverr.com/sellers/taha_sales/"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="Fiverr">
+                <span class="platform-text fiverr-icon">fi</span>
+            </a>
+
+            <button
+                type="button"
+                class="mobile-social-toggle"
+                id="mobileSocialToggle"
+                aria-label="Show more social links">
+                <i class="fas fa-plus"></i>
+            </button>
+
         </div>
+
         <div class="social-hidden" id="socialHidden">
-            <a href="https://linktr.ee/taha.salesdev" target="_blank" title="Linktree"><i class="fab fa-linktree"></i></a>
-            <a href="https://x.com/tahasalesdev" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.tiktok.com/@taha.salesdev" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.youtube.com/channel/UCRIFMBuY1eeiUbY2LPVbR8A" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+
+            <a href="https://www.freelancer.in/u/tahaishfaqbwp"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="Freelancer">
+                <span class="platform-text freelancer-icon">F</span>
+            </a>
+
+            <a href="https://www.facebook.com/taha.salesdev"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.instagram.com/taha.salesdev/"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://linktr.ee/taha.salesdev"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="Linktree">
+                <span class="platform-text linktree-icon">L</span>
+            </a>
+
+            <a href="https://x.com/tahasalesdev"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="X (Twitter)">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@taha.salesdev"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCRIFMBuY1eeiUbY2LPVbR8A"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+
         </div>
+
     </div>
 
 </div>
@@ -103,23 +192,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 <ul>
 
 <li><a href="index.html">Home</a></li>
-
 <li><a href="services.html">Services</a></li>
-
 <li><a href="portfolio.html">Portfolio</a></li>
-
 <li><a href="feedback.html">Feedback</a></li>
-
 <li><a class="active" href="experience.html">Experience</a></li>
-
 <li><a href="certifications.html">Certifications</a></li>
-
 <li><a href="resume.html">Resume</a></li>
-
 <li><a href="about.html">About</a></li>
-
 <li><a href="blog/index.html">Blog</a></li>
-
 <li><a href="contact.html">Contact</a></li>
 
 </ul>
@@ -127,7 +207,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 </nav>
 
 <div class="menu-btn">
-<i class="fas fa-bars"></i>
+    <i class="fas fa-bars"></i>
 </div>
 
 </div>
@@ -147,7 +227,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 <p style="max-width:850px;margin:auto;color:#9ca3af;">
 
 Over four years of supporting startups and established businesses with
-<a href="services/sales-development.html" style="color:#3b82f6;text-decoration:none;">Sales Development</a>, <a href="services/lead-generation.html" style="color:#3b82f6;text-decoration:none;">Lead Generation</a>, <a href="services/crm-management.html" style="color:#3b82f6;text-decoration:none;">CRM Management</a>, <a href="services/market-research.html" style="color:#3b82f6;text-decoration:none;">Market Research</a>,
+<a href="services/sales-development.html" style="color:#3b82f6;text-decoration:none;">Sales Development</a>,
+<a href="services/lead-generation.html" style="color:#3b82f6;text-decoration:none;">Lead Generation</a>,
+<a href="services/crm-management.html" style="color:#3b82f6;text-decoration:none;">CRM Management</a>,
+<a href="services/market-research.html" style="color:#3b82f6;text-decoration:none;">Market Research</a>,
 Virtual Assistance, and Administrative Support.
 
 </p>
@@ -172,35 +255,19 @@ Virtual Assistance, and Administrative Support.
 
 <div class="timeline">
 
-<!-- ITEM -->
-
 <div class="timeline-item">
 
 <div class="timeline-icon">
-
 <i class="fas fa-briefcase"></i>
-
 </div>
 
 <div class="timeline-content">
 
-<h3>
+<h3>Dashboard Assistant</h3>
 
-Dashboard Assistant
+<h4>FareVet • Canada</h4>
 
-</h3>
-
-<h4>
-
-FareVet • Canada
-
-</h4>
-
-<span>
-
-September 2024 – Present
-
-</span>
+<span>September 2024 – Present</span>
 
 <p>
 
@@ -215,11 +282,8 @@ and assisting internal administrative workflows.
 <div class="skills">
 
 <span>Dashboard Support</span>
-
 <span>Administration</span>
-
 <span>CRM</span>
-
 <span>Reporting</span>
 
 </div>
@@ -228,35 +292,19 @@ and assisting internal administrative workflows.
 
 </div>
 
-<!-- ITEM -->
-
 <div class="timeline-item">
 
 <div class="timeline-icon">
-
 <i class="fas fa-chart-line"></i>
-
 </div>
 
 <div class="timeline-content">
 
-<h3>
+<h3>Sales Development Representative</h3>
 
-Sales Development Representative
+<h4>Robolink • United States</h4>
 
-</h3>
-
-<h4>
-
-Robolink • United States
-
-</h4>
-
-<span>
-
-February 2025 – May 2025
-
-</span>
+<span>February 2025 – May 2025</span>
 
 <p>
 
@@ -271,11 +319,8 @@ and delivered CRM-ready prospect databases.
 <div class="skills">
 
 <span>SDR</span>
-
 <span>Lead Generation</span>
-
 <span>Apollo</span>
-
 <span>Prospecting</span>
 
 </div>
@@ -284,35 +329,19 @@ and delivered CRM-ready prospect databases.
 
 </div>
 
-<!-- ITEM -->
-
 <div class="timeline-item">
 
 <div class="timeline-icon">
-
 <i class="fas fa-user-tie"></i>
-
 </div>
 
 <div class="timeline-content">
 
-<h3>
+<h3>Virtual Assistant</h3>
 
-Virtual Assistant
+<h4>Icon Studios • United States</h4>
 
-</h3>
-
-<h4>
-
-Icon Studios • United States
-
-</h4>
-
-<span>
-
-July 2025 – September 2025
-
-</span>
+<span>July 2025 – September 2025</span>
 
 <p>
 
@@ -327,11 +356,8 @@ and client documentation.
 <div class="skills">
 
 <span>Virtual Assistance</span>
-
 <span>CRM</span>
-
 <span>Administration</span>
-
 <span>Research</span>
 
 </div>
@@ -340,35 +366,19 @@ and client documentation.
 
 </div>
 
-<!-- ITEM -->
-
 <div class="timeline-item">
 
 <div class="timeline-icon">
-
 <i class="fas fa-search"></i>
-
 </div>
 
 <div class="timeline-content">
 
-<h3>
+<h3>Market Research Analyst</h3>
 
-Market Research Analyst
+<h4>Ankermid • Netherlands</h4>
 
-</h3>
-
-<h4>
-
-Ankermid • Netherlands
-
-</h4>
-
-<span>
-
-Project Based
-
-</span>
+<span>Project Based</span>
 
 <p>
 
@@ -383,9 +393,7 @@ for international business development.
 <div class="skills">
 
 <span>Research</span>
-
 <span>Business Intelligence</span>
-
 <span>Competitor Analysis</span>
 
 </div>
@@ -394,35 +402,19 @@ for international business development.
 
 </div>
 
-<!-- ITEM -->
-
 <div class="timeline-item">
 
 <div class="timeline-icon">
-
 <i class="fas fa-list"></i>
-
 </div>
 
 <div class="timeline-content">
 
-<h3>
+<h3>Lead List & Quality Assurance</h3>
 
-Lead List & Quality Assurance
+<h4>Landis & Gyr • Australia</h4>
 
-</h3>
-
-<h4>
-
-Landis & Gyr • Australia
-
-</h4>
-
-<span>
-
-Project Based
-
-</span>
+<span>Project Based</span>
 
 <p>
 
@@ -436,9 +428,7 @@ and ensured CRM quality standards.
 <div class="skills">
 
 <span>Lead Lists</span>
-
 <span>Verification</span>
-
 <span>Quality Assurance</span>
 
 </div>
@@ -447,58 +437,39 @@ and ensured CRM quality standards.
 
 </div>
 
-<!-- ITEM -->
-
 <div class="timeline-item">
 
-    <div class="timeline-icon">
+<div class="timeline-icon">
+<i class="fas fa-heart"></i>
+</div>
 
-        <i class="fas fa-heart"></i>
+<div class="timeline-content">
 
-    </div>
+<h3>Founder & CEO</h3>
 
-    <div class="timeline-content">
+<h4>Ever Rise • Pakistan</h4>
 
-        <h3>
+<span>Present</span>
 
-            Founder & CEO
+<p>
 
-        </h3>
+Founded Ever Rise with a vision of helping deserving
+families become financially independent through
+sustainable support, employment opportunities,
+education, and community development initiatives.
 
-        <h4>
+</p>
 
-            Ever Rise • Pakistan
+<div class="skills">
 
-        </h4>
+<span>Leadership</span>
+<span>Project Management</span>
+<span>Community Support</span>
+<span>Operations</span>
 
-        <span>
+</div>
 
-            Present
-
-        </span>
-
-        <p>
-
-            Founded Ever Rise with a vision of helping deserving
-            families become financially independent through
-            sustainable support, employment opportunities,
-            education, and community development initiatives.
-
-        </p>
-
-        <div class="skills">
-
-            <span>Leadership</span>
-
-            <span>Project Management</span>
-
-            <span>Community Support</span>
-
-            <span>Operations</span>
-
-        </div>
-
-    </div>
+</div>
 
 </div>
 
@@ -516,11 +487,7 @@ and ensured CRM quality standards.
 
 <div class="section-title">
 
-<h2>
-
-Experience Highlights
-
-</h2>
+<h2>Experience Highlights</h2>
 
 </div>
 
@@ -530,17 +497,9 @@ Experience Highlights
 
 <i class="fas fa-users"></i>
 
-<h3>
+<h3>35+</h3>
 
-35+
-
-</h3>
-
-<p>
-
-Businesses Supported
-
-</p>
+<p>Businesses Supported</p>
 
 </div>
 
@@ -548,17 +507,9 @@ Businesses Supported
 
 <i class="fas fa-globe"></i>
 
-<h3>
+<h3>7+</h3>
 
-7+
-
-</h3>
-
-<p>
-
-Global Regions Served
-
-</p>
+<p>Global Regions Served</p>
 
 </div>
 
@@ -566,17 +517,9 @@ Global Regions Served
 
 <i class="fas fa-clock"></i>
 
-<h3>
+<h3>2300+</h3>
 
-2300+
-
-</h3>
-
-<p>
-
-Hours Delivered
-
-</p>
+<p>Hours Delivered</p>
 
 </div>
 
@@ -584,17 +527,9 @@ Hours Delivered
 
 <i class="fas fa-award"></i>
 
-<h3>
+<h3>100%</h3>
 
-100%
-
-</h3>
-
-<p>
-
-Job Success
-
-</p>
+<p>Job Success</p>
 
 </div>
 
@@ -612,11 +547,7 @@ Job Success
 
 <div class="section-title">
 
-<h2>
-
-Core Expertise
-
-</h2>
+<h2>Core Expertise</h2>
 
 </div>
 
@@ -624,11 +555,7 @@ Core Expertise
 
 <div class="card">
 
-<h3>
-
-Sales Development
-
-</h3>
+<h3>Sales Development</h3>
 
 <p>
 
@@ -643,11 +570,7 @@ and appointment preparation.
 
 <div class="card">
 
-<h3>
-
-Lead Generation
-
-</h3>
+<h3>Lead Generation</h3>
 
 <p>
 
@@ -661,11 +584,7 @@ methods.
 
 <div class="card">
 
-<h3>
-
-CRM Management
-
-</h3>
+<h3>CRM Management</h3>
 
 <p>
 
@@ -681,11 +600,7 @@ for better sales performance.
 
 <div class="card">
 
-<h3>
-
-Virtual Assistance
-
-</h3>
+<h3>Virtual Assistance</h3>
 
 <p>
 
@@ -701,11 +616,7 @@ and business operations.
 
 <div class="card">
 
-<h3>
-
-Market Research
-
-</h3>
+<h3>Market Research</h3>
 
 <p>
 
@@ -720,11 +631,7 @@ and business insights.
 
 <div class="card">
 
-<h3>
-
-Data Quality
-
-</h3>
+<h3>Data Quality</h3>
 
 <p>
 
@@ -749,11 +656,7 @@ and CRM-ready delivery.
 
 <div class="container">
 
-<h2>
-
-Let's Build Your Sales Pipeline
-
-</h2>
+<h2>Let's Build Your Sales Pipeline</h2>
 
 <p style="margin-bottom:35px;color:#9ca3af;">
 
@@ -766,9 +669,7 @@ Let's work together.
 </p>
 
 <a href="contact.html" class="btn">
-
 Hire Me
-
 </a>
 
 </div>
@@ -781,38 +682,24 @@ Hire Me
 
 <div>
 
-<h3>
-
-Taha Bin Ishfaq
-
-</h3>
+<h3>Taha Bin Ishfaq</h3>
 
 <p>
-
 Sales Development Representative
-
 </p>
 
 </div>
 
 <div>
 
-<h4>
-
-Quick Links
-
-</h4>
+<h4>Quick Links</h4>
 
 <ul>
 
 <li><a href="services.html">Services</a></li>
-
 <li><a href="portfolio.html">Portfolio</a></li>
-
 <li><a href="resume.html">Resume</a></li>
-
 <li><a href="contact.html">Contact</a></li>
-
 <li><a href="privacy-policy.html">Privacy Policy</a></li>
 
 </ul>
@@ -821,43 +708,109 @@ Quick Links
 
 <div>
 
-<h4>
-
-Contact
-
-</h4>
+<h4>Contact</h4>
 
 <p>
-
 <i class="fas fa-envelope"></i>
-
 tahaatworknow@gmail.com
-
 </p>
 
 <p>
-
 <i class="fab fa-whatsapp"></i>
-
 +92 334 4058002
-
 </p>
 
 </div>
-            <div class="footer-social-col">
-                <h4>Follow Me</h4>
-                <div class="footer-social-icons">
-                    <a href="https://www.upwork.com/freelancers/tahabinashfaq" target="_blank" title="Upwork"><i class="fab fa-upwork"></i></a>
-                    <a href="https://wa.me/923344058002" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.facebook.com/taha.salesdev" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/taha.salesdev/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://linktr.ee/taha.salesdev" target="_blank" title="Linktree"><i class="fab fa-linktree"></i></a>
-                    <a href="https://x.com/tahasalesdev" target="_blank" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.tiktok.com/@taha.salesdev" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://www.youtube.com/channel/UCRIFMBuY1eeiUbY2LPVbR8A" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
+
+<div class="footer-social-col">
+
+<h4>Follow Me</h4>
+
+<div class="footer-social-icons">
+
+<a href="https://www.upwork.com/freelancers/tahabinashfaq"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="Upwork">
+    <i class="fab fa-upwork"></i>
+</a>
+
+<a href="https://wa.me/923344058002"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<a href="https://contra.com/taha_salesdev/"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="Contra">
+    <span class="platform-text contra-icon">C</span>
+</a>
+
+<a href="https://www.fiverr.com/sellers/taha_sales/"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="Fiverr">
+    <span class="platform-text fiverr-icon">fi</span>
+</a>
+
+<a href="https://www.freelancer.in/u/tahaishfaqbwp"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="Freelancer">
+    <span class="platform-text freelancer-icon">F</span>
+</a>
+
+<a href="https://www.facebook.com/taha.salesdev"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="Facebook">
+    <i class="fab fa-facebook-f"></i>
+</a>
+
+<a href="https://www.instagram.com/taha.salesdev/"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="Instagram">
+    <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://linktr.ee/taha.salesdev"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="Linktree">
+    <span class="platform-text linktree-icon">L</span>
+</a>
+
+<a href="https://x.com/tahasalesdev"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="X (Twitter)">
+    <i class="fa-brands fa-x-twitter"></i>
+</a>
+
+<a href="https://www.tiktok.com/@taha.salesdev"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="TikTok">
+    <i class="fab fa-tiktok"></i>
+</a>
+
+<a href="https://www.youtube.com/channel/UCRIFMBuY1eeiUbY2LPVbR8A"
+   target="_blank"
+   rel="noopener noreferrer"
+   title="YouTube">
+    <i class="fab fa-youtube"></i>
+</a>
+
 </div>
+
+</div>
+
+</div>
+
 <div class="copyright">
 
 © 2026 Taha Bin Ishfaq. All Rights Reserved.
@@ -871,3 +824,4 @@ tahaatworknow@gmail.com
 </body>
 
 </html>
+```
