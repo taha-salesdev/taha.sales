@@ -457,6 +457,32 @@
         if (!packageInput.value) packageInput.value = packageSelect.value;
       });
     })();
+// Hide floating header social icons when the footer enters view
+const headerSocial = document.querySelector(".header-social");
+const footer = document.querySelector("footer");
+
+if (headerSocial && footer) {
+  headerSocial.style.transition = "opacity 0.3s ease";
+
+  const footerObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          headerSocial.style.opacity = "0";
+          headerSocial.style.visibility = "hidden";
+          headerSocial.style.pointerEvents = "none";
+        } else {
+          headerSocial.style.opacity = "1";
+          headerSocial.style.visibility = "visible";
+          headerSocial.style.pointerEvents = "auto";
+        }
+      });
+    },
+    { threshold: 0.05 }
+  );
+
+  footerObserver.observe(footer);
+}
   </script>
 </body>
 </html>
