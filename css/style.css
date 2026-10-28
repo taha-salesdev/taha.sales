@@ -1319,3 +1319,46 @@ footer a:hover {
 }
 
 
+/* ==========================================
+   DESKTOP HEADER ALIGNMENT FIX
+========================================== */
+
+@media (min-width: 993px) {
+    header .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .logo-area {
+        position: absolute;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    header nav {
+        position: relative;
+        margin: 0;
+        width: auto;
+        max-width: 100%;
+    }
+
+    header nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: clamp(10px, 1.4vw, 20px);
+    }
+
+    header nav a {
+        white-space: nowrap;
+        font-size: clamp(11px, 0.95vw, 14px);
+    }
+}
+
+
+
