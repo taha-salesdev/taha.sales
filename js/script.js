@@ -25,13 +25,13 @@ const words = [
 
     "Outbound Sales Manager",
 
-   "Market Research Specialist"
+    "Market Research Specialist"
 
     "CRM Management Expert",
 
-   "Virtual Assistant",
+    "Virtual Assistant",
 
-   "Administrator"
+    "Administrator"
 
 ];
 
