@@ -18,21 +18,13 @@ window.addEventListener("load", () => {
 ========================================================== */
 
 const words = [
-
     "Sales Development Representative",
-
     "Lead Generation Specialist",
-
     "Outbound Sales Manager",
-
-    "Market Research Specialist"
-
+    "Market Research Specialist",
     "CRM Management Expert",
-
     "Virtual Assistant",
-
     "Administrator"
-
 ];
 
 let wordIndex = 0;
